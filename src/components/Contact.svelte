@@ -7,7 +7,7 @@
 	export let data;
 
 	let alerts = data.alerts;
-	let fields = data.fields;
+	let fields = data.form.fields;
 
 	let valid_form = false;
 	$: valid_form = fields[0].valid && fields[1].valid && fields[2].valid;
@@ -45,6 +45,7 @@
 	$: validate_content(fields[msgIndex].input);
 
 	function onSubmit(e) {
+		console.log(valid_form)
 		if (valid_form) {
 			const formData = new FormData(e.target);
 			const data = {};

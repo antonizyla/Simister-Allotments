@@ -1,43 +1,41 @@
 <script>
 	export let data;
 	let images = data.images
+
 </script>
 
-<div class="container">
-	<main id={data.id}>
+	<div class="container" id={data.id}>
 		{#each images as image}
-			<div class="h{image.height} w{image.width}"><img src={image.src} alt={image.alt} /></div>
+			<div class="grid-item h{image.height} w{image.width}"><img class="image" src={image.src} loading="lazy" alt={image.alt} /></div>
 		{/each}
-	</main>
-</div>
+	</div>
 
 <style>
-	img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 10px;
+
+	.image {
+		padding-bottom: 0;
+		margin: 0;
+		width: 100%;
+		border-radius: 0.5em;
+		height: 100%;
 	}
+
 	.container {
-		width: 90vw;
+		display: grid;
+		grid-template-columns: repeat(6, auto);
+		grid-auto-flow: row dense;
+		width: 88vw;
 		margin: auto;
 		padding: 2em;
+		gap: 1em;
 	}
-	main {
-		display: inline-grid;
-		margin: auto 0;
-		grid-template-columns: repeat(6, auto);
-		grid-template-rows: repeat(auto, auto);
-		gap: 10px;
-		grid-auto-flow: row dense;
-	}
+
 	@media (max-width: 768px) {
-		main {
+		.container {
 			grid-template-columns: repeat(4, auto);
 		}
-		img {
-			border-radius: 6px;
-		}
 	}
+
 	.h2 {
 		grid-row: span 2;
 	}

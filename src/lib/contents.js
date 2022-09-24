@@ -165,7 +165,7 @@ export let contents = {
 			},
 			{
 				src: '/images/17.JPG',
-				alt: "View of Flowers on somone's plot.",
+				alt: "View of Flowers on someone's plot.",
 				width: '2',
 				height: '1'
 			},
@@ -176,17 +176,27 @@ export let contents = {
 				height: '1'
 			},
 			{
-				src: '/images/Sitemap43.png',
-				alt: 'Ariel Overview of the allotment',
-				width: '4',
-				height: '2'
-			},
-			{
 				src: '/images/8.JPG',
 				alt: 'Another View of the allotment.',
 				width: '2',
 				height: '1'
-			}
+			},
+			{
+				src: '/images/15.JPG',
+				alt: 'Ariel Overview of the allotment',
+				width: '2',
+				height: '4'
+			},{
+				src: '/images/16.JPG',
+				alt: 'Ariel Overview of the allotment',
+				width: '2',
+				height: '4'
+			},{
+				src: '/images/19.JPG',
+				alt: 'Ariel Overview of the allotment',
+				width: '2',
+				height: '3'
+			},
 		]
 	},
 	footer: {
@@ -199,7 +209,7 @@ export let contents = {
 			{
 				label: 'How we use cookies',
 				type: 'internal',
-				href: '/'
+				href: '/cookies'
 			}
 		],
 		disclaimer: {

@@ -17,12 +17,10 @@
 </script>
 
 <nav class:dropdown-opened={mobileNavOpened} class:dark>
-	<!-- svelte-ignore component-name-lowercase -->
 	<a class="logo" href={navItems.logo_link.href}>{navItems.logo_link.label}</a>
 	<div class="dropdown-link-container">
 		{#each navItems.links as item}
-			<!-- svelte-ignore component-name-lowercase -->
-			<a on:click={toggleMobileNav} href={item.href}>{item.label}</a>
+		<a on:click={toggleMobileNav} href={item.href}>{item.label}</a>
 		{/each}
 	</div>
 	<button aria-hidden="true" class="mobile-dropdown-toggle" on:click={toggleMobileNav}>

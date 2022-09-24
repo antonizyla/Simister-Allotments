@@ -24,6 +24,7 @@
 	--p-size: 18px;
 	--large-heading-size: 48px;
 	--section-heading-size: 28px;
+	--content-width: 80vw;
 	color: var(--text-color);
 	background-color: var(--background-color);
 }

@@ -10,20 +10,20 @@
 </script>
 
 <main id="about">
-	<Grid container gutter={12}>
-		<Grid lg={2.5} md={2} />
-		<Grid lg={3.5} md={5} sm={12}>
+	<Grid container columns={12} gutter={12}>
+		<Grid lg={1} md={0} sm={0}/>
+		<Grid lg={5} md={6} sm={12}>
 			<div class="acc">
 				<Accordion items={data.faq}/>
 			</div>
 		</Grid>
-		<Grid lg={3.5} md={5} sm={12}>
+		<Grid lg={5} md={6} sm={12}>
 			<section>
 				<h2>{data.text.title}</h2>
 				<p>{data.text.subtext}</p>
 			</section>
 		</Grid>
-		<Grid lg={2.5} md={2} />
+		<Grid lg={1} md={0} sm={0}/>
 	</Grid>
 </main>
 
@@ -39,8 +39,7 @@
 	}
 
 	main {
-		padding-top: 2em;
-		padding-bottom: 3em;
+		padding: 3em 2em 3em 2em;
 		display: flex;
 		flex-direction: row;
 	}
