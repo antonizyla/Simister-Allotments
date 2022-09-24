@@ -3,6 +3,8 @@
 
 	import Button from '../components/Button.svelte';
 
+	import {contents} from "$lib/contents.js";
+
 	import { allowedCookies } from '../components/stores.js';
 
 	import Modal from '../components/Modal.svelte';
@@ -24,7 +26,7 @@
 </script>
 
 <main>
-	<Nav dark={true} />
+	<Nav data={contents.navigation} dark={true} />
 
 	<div class="center">
 		<h1>How we use Cookies</h1>
