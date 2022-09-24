@@ -17,6 +17,7 @@
 		closeModal();
 		console.log($allowedCookies);
 		$allowedCookies = 'true';
+		grant_analytics();
 		console.log($allowedCookies);
 	}
 
