@@ -6,3 +6,8 @@ node_modules
 .env
 .env.*
 !.env.example
+.idea/.gitignore
+.idea/allotment.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml

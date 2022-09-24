@@ -1,65 +1,10 @@
 <script>
-	let images = [
-		{
-			src: '/images/1.JPG',
-			alt: 'Image of Entrance to the allotment.',
-			width: '2',
-			height: '1'
-		},
-		{
-			src: '/images/2.JPG',
-			alt: 'View of plot to the right of the gate.',
-			width: '2',
-			height: '1'
-		},
-		{
-			src: '/images/3.JPG',
-			alt: "Image of Raspberries on Someone's Plot.",
-			width: '4',
-			height: '2'
-		},
-		{
-			src: '/images/4.JPG',
-			alt: 'View of plot towards the middle left of the allotment.',
-			width: '2',
-			height: '1'
-		},
-		{
-			src: '/images/5.JPG',
-			alt: 'View of the middle left side of the allotment from the central road.',
-			width: '2',
-			height: '1'
-		},
-		{
-			src: '/images/17.JPG',
-			alt: "View of Flowers on somone's plot.",
-			width: '2',
-			height: '1'
-		},
-
-		{
-			src: '/images/7.JPG',
-			alt: 'View of another plot of the allotment.',
-			width: '2',
-			height: '1'
-		},
-		{
-			src: '/images/Sitemap43.png',
-			alt: 'Ariel Overview of the allotment',
-			width: '4',
-			height: '2'
-		},
-		{
-			src: '/images/8.JPG',
-			alt: 'Another View of the allotment.',
-			width: '2',
-			height: '1'
-		}
-	];
+	export let data;
+	let images = data.images
 </script>
 
 <div class="container">
-	<main id="gallery">
+	<main id={data.id}>
 		{#each images as image}
 			<div class="h{image.height} w{image.width}"><img src={image.src} alt={image.alt} /></div>
 		{/each}

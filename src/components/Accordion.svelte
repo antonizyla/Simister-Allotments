@@ -4,38 +4,40 @@
 	let max_open_accordions = 3; //set to 0 to have no limit on open
 	let accoridon_queue = [];
 
-	let items = [
-		{
-			Id: '0',
-			title: '1. What are the typical yearly costs for a plot?',
-			content: 'lorem ipsum',
-			open: true
-		},
-		{
-			Id: '1',
-			title: 'What size is a typical plot?',
-			content: 'lorem ipsum2 lorme ipsum',
-			open: false
-		},
-		{
-			Id: '2',
-			title: 'What size is a typical plot?',
-			content: 'lorem ipsum2 lorme ipsum',
-			open: false
-		},
-		{
-			Id: '3',
-			title: 'What size is a typical plot?',
-			content: 'lorem ipsum2 lorme ipsum',
-			open: false
-		},
-		{
-			Id: '4',
-			title: 'What size is a typical plot?',
-			content: 'lorem ipsum2 lorme ipsum',
-			open: false
-		}
-	];
+	export let items;
+
+	// let items = [
+	// 	{
+	// 		Id: '0',
+	// 		title: '1. What are the typical yearly costs for a plot?',
+	// 		content: 'lorem ipsum',
+	// 		open: true
+	// 	},
+	// 	{
+	// 		Id: '1',
+	// 		title: 'What size is a typical plot?',
+	// 		content: 'lorem ipsum2 lorme ipsum',
+	// 		open: false
+	// 	},
+	// 	{
+	// 		Id: '2',
+	// 		title: 'What size is a typical plot?',
+	// 		content: 'lorem ipsum2 lorme ipsum',
+	// 		open: false
+	// 	},
+	// 	{
+	// 		Id: '3',
+	// 		title: 'What size is a typical plot?',
+	// 		content: 'lorem ipsum2 lorme ipsum',
+	// 		open: false
+	// 	},
+	// 	{
+	// 		Id: '4',
+	// 		title: 'What size is a typical plot?',
+	// 		content: 'lorem ipsum2 lorme ipsum',
+	// 		open: false
+	// 	}
+	// ];
 
 	items.forEach((element) => {
 		if (element.open) {

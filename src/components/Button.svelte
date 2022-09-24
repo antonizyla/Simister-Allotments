@@ -3,7 +3,7 @@
 	export let flat = false;
 </script>
 
-<button class={style} class:flat on:click>
+<button class={style} class:flat on:click >
 	<slot />
 </button>
 

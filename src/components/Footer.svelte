@@ -1,28 +1,33 @@
 <script>
-	import Grid from 'svelte-grid-responsive';
+	import { object_without_properties } from "svelte/internal";
+
+
 
 	let currentYear = new Date().getFullYear();
 
-	let footer = [
-		{ text: 'Home', href: '/', external: false },
-		{ text: 'Contact', href: '#contact', external: false },
-		{ text: 'How we use Cookies', href: '/cookies', external: false },
-		{ text: 'Github', href: 'https://www.github.com/antonizyla', external: true }
-	];
+	// import {contents} from '../lib/contents.js'
+
+	export let data
+
+	let links = data.navigation.links.concat(data.footer.links)
+	 let disclaimer = data.footer.disclaimer
+
+	
+
 </script>
 
 <footer>
 	<div class="links">
-		{#each footer as link}
-			{#if link.external}
-				<a href={link.href} target="_balnk">{link.text}</a>
+		{#each links as link}
+			{#if link.type === 'external'}
+				<a href={link.href} target="_balnk">{link.label}</a>
 			{:else}
-				<a href={link.href}>{link.text}</a>
+				<a href={link.href}>{link.label}</a>
 			{/if}
 		{/each}
 	</div>
 	<div class="info">
-		<p>Site Developed And Designed By Antoni Zyla © {currentYear}</p>
+		<p>{disclaimer.text} © {currentYear}</p>
 	</div>
 </footer>
 

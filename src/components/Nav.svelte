@@ -12,18 +12,17 @@
 		mobileNavOpened = !mobileNavOpened;
 	}
 
-	let navItems = [
-		{ link: '#about', text: 'About Us' },
-		{ link: '#gallery', text: 'Gallery' },
-		{ link: '#contact', text: 'Contact Us' }
-	];
+	export let data;
+	let navItems = data
 </script>
 
 <nav class:dropdown-opened={mobileNavOpened} class:dark>
-	<a class="logo" href="/"> Simister Allotments </a>
+	<!-- svelte-ignore component-name-lowercase -->
+	<a class="logo" href={navItems.logo_link.href}>{navItems.logo_link.label}</a>
 	<div class="dropdown-link-container">
-		{#each navItems as item}
-			<a on:click={toggleMobileNav} href={item.link}>{item.text}</a>
+		{#each navItems.links as item}
+			<!-- svelte-ignore component-name-lowercase -->
+			<a on:click={toggleMobileNav} href={item.href}>{item.label}</a>
 		{/each}
 	</div>
 	<button aria-hidden="true" class="mobile-dropdown-toggle" on:click={toggleMobileNav}>
@@ -34,6 +33,7 @@
 		{/if}
 	</button>
 </nav>
+
 
 <style>
 
@@ -74,14 +74,18 @@
 	}
 
 	@media (max-width: 768px) {
-		.logo,
+		.logo{
+			z-index: 21;
+			color: var(--heading-color);
+		}
 		.mobile-dropdown-toggle {
-			z-index: 1;
+			z-index: 20;
 			color: var(--heading-color);
 		}
 
 		.mobile-dropdown-toggle {
 			display: initial;
+			z-index: 20;
 		}
 
 		.dropdown-link-container {
@@ -102,7 +106,7 @@
 			padding-right: 7vw;
 
 			background: var(--secondary-color);
-			z-index: 0;
+			z-index: 20;
 
 			opacity: 0;
 			transform: translateY(-100%);
@@ -113,11 +117,13 @@
 			opacity: 1;
 			transform: translateY(0);
 			padding-bottom: 1em;
+			z-index: 20;
 		}
 
 		a {
 			padding-bottom: 1em;
 			color: var(--accent-color);
+			z-index: 20;
 		}
 	}
 </style>

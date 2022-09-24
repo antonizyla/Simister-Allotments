@@ -1,6 +1,12 @@
 <script lang="ts">
 	import Accordion from './Accordion.svelte';
 	import Grid from 'svelte-grid-responsive';
+
+	import { text } from 'svelte/internal';
+
+	export let data;
+
+
 </script>
 
 <main id="about">
@@ -8,17 +14,13 @@
 		<Grid lg={2.5} md={2} />
 		<Grid lg={3.5} md={5} sm={12}>
 			<div class="acc">
-				<Accordion />
+				<Accordion items={data.faq}/>
 			</div>
 		</Grid>
 		<Grid lg={3.5} md={5} sm={12}>
 			<section>
-				<h2>About Us</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nesciunt totam similique
-					blanditiis tempora necessitatibus nisi doloribus numquam cupiditate labore. Beatae vero
-					quidem neque rerum recusandae, blanditiis repudiandae quo voluptatibus?.
-				</p>
+				<h2>{data.text.title}</h2>
+				<p>{data.text.subtext}</p>
 			</section>
 		</Grid>
 		<Grid lg={2.5} md={2} />

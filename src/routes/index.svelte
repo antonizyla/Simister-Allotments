@@ -3,14 +3,15 @@
 	import ContactCta from '../components/ContactCta.svelte';
 	import About from '../components/About.svelte';
 	import ImageGallery from '../components/ImageGallery.svelte';
+
+	import { contents } from '$lib/contents';
+
 </script>
 
 <section>
-	<Splash />
-	<ContactCta />
-	<About />
-	<ImageGallery></ImageGallery>
+	<Splash data={Object.assign(contents.home, contents.navigation)}/>
+	<ContactCta data={contents.contact}/>
+	<About data={contents.about} />
+	<ImageGallery data={contents.gallery}/>
 </section>
 
-<style>
-</style>

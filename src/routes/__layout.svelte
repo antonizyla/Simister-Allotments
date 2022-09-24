@@ -15,11 +15,13 @@
         openModal(CookiesModal);
     }
 
+    import {contents} from '$lib/contents'
+
 </script>
 
 <slot/>
 
-<Footer></Footer>
+<Footer data={contents}></Footer>
 
 <Modals>
     <div class="backdrop" on:click={closeModal} slot="backdrop"/>

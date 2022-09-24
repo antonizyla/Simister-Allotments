@@ -1,29 +1,30 @@
 <script lang="ts">
 	import Nav from './Nav.svelte';
 	import Icon from '@iconify/svelte';
+
+	export let data;
+
 </script>
 
 <section>
 	<div class="nav">
-		<Nav />
+		<Nav data={data}/>
 	</div>
 	<div class="text">
-		<h1>Simister Allotments</h1>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi quaerat provident
-			expedita! Aspernatur delectus distinctio ducimus quis expedita, ipsa rem magni, odio, laborum
-			consequuntur cum eveniet quo quae. Beatae.
+		<h1>{data.centre.title}</h1>
+		<p>{data.centre.subtitle}
 		</p>
 	</div>
 	<div class="cta">
-		<p>Find out more</p>
-		<a href="#contact">
-			<Icon height="4em" icon="bi:arrow-down" width="3em" />
+		<p>{data.cta.text}</p>
+		<a href={data.cta.href}>
+			<Icon height="4em" icon={data.cta.icon} width="3em" />
 		</a>
 	</div>
 </section>
 
 <style>
+
 	section {
 		display: flex;
 		flex-direction: column;
@@ -57,6 +58,6 @@
 	}
 
 	a {
-		color: var(--heading-color);
+		color: var(--secondary-color);
 	}
 </style>
